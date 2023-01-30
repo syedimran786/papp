@@ -36,11 +36,11 @@ import { useSelector,useDispatch } from 'react-redux';
 import { buyCake } from './cakeActions'
 
 function CakeShop() {
-   let totalCakes=useSelector(state=>state.totalCakes);
+   let Cake=useSelector(state=>state);
    let dispatch=useDispatch()
   return (
     <div>
-        <h1>Total Cakes: {totalCakes}</h1>
+        <h1>Total Cakes: {Cake.cakeReducer.totalCakes}</h1>
         <button onClick={()=>(dispatch(buyCake()))}>Buy Cake</button>
     </div>
   )

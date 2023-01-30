@@ -11,3 +11,16 @@ export let iceReducer=(state=intalstate,action)=>
         default:return state
     }
 }
+
+//! if we want to use payload while dispachig we have to an argument 
+//! for mapstattoprops and maostatetodispatch
+
+// let mapDispatchToProps=(dispatch)=>
+// {
+//     return {buyCake:(number)=>dispatch(buyCake())}
+// }
+
+// export let buyIce=(number=1)=>
+// {
+//     return {type:BUY_ICE,payload:number}
+// } 
