@@ -13,7 +13,7 @@ export let iceReducer=(state=intalstate,action)=>
 }
 
 //! if we want to use payload while dispachig we have to an argument 
-//! for mapstattoprops and maostatetodispatch
+//! for mapstattoprops and maostatetodispatch.
 
 // let mapDispatchToProps=(dispatch)=>
 // {
