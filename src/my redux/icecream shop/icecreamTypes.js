@@ -1,0 +1,1 @@
+export let BUY_ICE="BUY_ICE";

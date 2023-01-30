@@ -1,0 +1,42 @@
+.accordins
+{
+    background-color: white;
+    width: 700px;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+
+    .accordin
+    {
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px 2px gray;
+        color: black;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .accordin-heading
+        {
+            display: flex;
+            justify-content: space-between;
+
+            button
+            {
+                width: 30px;
+                height: 30px;
+                padding: 0px;
+            }
+        }
+
+        .accordin-data
+        {
+            font-size: 14px;
+          &:hover
+          {
+            box-shadow: 2px 2px 3px 3px black;
+          }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+//! theam 1
+// $card-shadow:white;
+// $img-shadow:rgb(237, 52, 11);
+// $btn-bg:rgb(29, 155, 228);
+// $card-bg:black;
+
+//! theam 2
+// $card-shadow:rgb(16, 213, 157);
+// $img-shadow:rgb(188, 237, 11);
+// $btn-bg:rgb(228, 29, 29);
+// $card-bg:rgb(245, 244, 244);
+
+//! theam 3
+$card-shadow:rgb(4, 66, 77);
+$img-shadow:rgb(73, 4, 110);
+$btn-bg:rgb(3, 152, 28);
+$card-bg:rgb(209, 194, 240);
+
+
+.card
+{
+    background-color: $card-bg;
+    box-shadow: 3px 3px 30px 3px $card-shadow;
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 20px;padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $card-shadow;
+
+    img
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        box-shadow: 5px -3px $img-shadow;
+    }
+    .info
+    {
+        display: flex;
+        justify-content: space-between;
+
+        h4
+        {
+            margin: 10px 45px;
+            text-transform: capitalize;
+        }
+
+    }
+    p
+    {
+        text-align: center;
+        font-size: 13px;
+        color: grey;
+    }
+    .btns
+    {
+        display: flex;
+        justify-content: space-between;
+        
+        button
+        {
+            margin: 10px;
+            background-color: $btn-bg;
+            border: none;
+            padding: 4px;
+        }
+    }
+}
