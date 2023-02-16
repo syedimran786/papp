@@ -1,11 +1,11 @@
 import { BUY_CAKE } from "./cakeTypes"
 
-let initialState={totalCakes:10}
+let initialState={numberOfCakes:10}
 let cakeReducer=(state=initialState,action)=>
 {
     switch(action.type)
     {
-        case BUY_CAKE:return {totalCakes:state.totalCakes-1};
+        case BUY_CAKE:return {numberOfCakes:state.numberOfCakes-1};
         default:return state;
     }
 }

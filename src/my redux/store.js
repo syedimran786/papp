@@ -5,6 +5,7 @@ import { rootReducer } from "./cobineReducers";
 import { composeWithDevTools } from '@redux-devtools/extension';
 import logger from "redux-logger";
 import { iceReducer } from "./icecream shop/icecreamReducer";
+import thunk from "redux-thunk";
 
 //! Counter
 // export let store=createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
@@ -19,4 +20,4 @@ import { iceReducer } from "./icecream shop/icecreamReducer";
 // export let store=createStore(iceReducer)
 
 //! both ice and cake
-export let store=createStore(rootReducer,composeWithDevTools(applyMiddleware(logger)))
+export let store=createStore(rootReducer,composeWithDevTools(applyMiddleware(thunk)))
