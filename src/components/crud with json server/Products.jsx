@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Products.scss"
-import UpdateProducts from './UpdateProducts';
+import {HTTP} from './axiosconfig'
+
 
 
 function Products() {
@@ -13,7 +14,7 @@ function Products() {
     let getProducts = async () => {
         try {
 
-            let { data } = await axios.get("http://localhost:4000/products");
+            let { data } = await HTTP.get("products");
             setProducts(data);
             // console.table(data);
         }
@@ -24,7 +25,7 @@ function Products() {
 
     let deleteProduct=async (id)=>
     {
-        let res=await axios.delete(`http://localhost:4000/products/${id}`);
+        let res=await HTTP.delete(`products/${id}`);
         console.log(res);
         getProducts();
 
@@ -34,6 +35,13 @@ function Products() {
     {
    
        navigate(`/updateProducts/${id}`)
+    }
+
+    let updateProductName=({id, title})=>
+    {
+        localStorage.setItem("id", id)
+        localStorage.setItem("title", title)
+
     }
 
     useEffect(() => {
@@ -62,6 +70,12 @@ function Products() {
                             </td>
                             <td>
                                 <button onClick={()=>{updateProduct(id)}}>Update</button>
+                            </td>
+                            <td>
+                            <Link to="/updateproductName">
+                            <button onClick={()=>{updateProductName({id, title})}}>Update Product Name</button>
+                            </Link>
+                               
                             </td>
                         </tr>
                     })}

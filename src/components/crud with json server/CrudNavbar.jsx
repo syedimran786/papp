@@ -9,6 +9,8 @@ function CrudNavbar() {
         <Link to="/getProducts">Products</Link>
         {/* <Link to="/updateProducts">Update Products</Link> */}
         <Link to="/addProducts">Add Products</Link>
+       
+
     </nav>
   )
 }

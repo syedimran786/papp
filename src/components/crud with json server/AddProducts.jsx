@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import {HTTP} from './axiosconfig'
 import { v4 as uuidv4 } from 'uuid';
 
 function AddProducts() {
@@ -21,11 +21,13 @@ function AddProducts() {
             alert("please add the product and price")
             return false
         }
-        let res=await axios.post("http://localhost:4000/products",{id:uuidv4(),...product});
+        let res=await HTTP.post("products",{id:uuidv4(),...product});
         setProduct({title:"",price:""})
         console.log(res);
         // navigate("/addProducts")
     }
+
+ 
 
     
   return (

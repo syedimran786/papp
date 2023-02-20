@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+import {HTTP} from './axiosconfig'
+
 
 
 function UpdateProducts() {
@@ -19,7 +20,7 @@ function UpdateProducts() {
     let getProducts = async () => {
         try {
 
-            let { data } = await axios.get(`http://localhost:4000/products/${pid}`);
+            let { data } = await HTTP.get(`products/${pid}`);
             setProduct(data);
         
             
@@ -38,7 +39,7 @@ function UpdateProducts() {
             alert("please add the product and price")
             return false
         }
-        let {data}=await axios.put(`http://localhost:4000/products/${pid}`,{title:product.title,price:product.price});
+        let {data}=await HTTP.put(`products/${pid}`,{title:product.title,price:product.price});
         
      console.log(data);
     }

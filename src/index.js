@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppProvider from './components/cart/AppProvider';
+// import AppProvider from './components/cart/AppProvider';
+import AppProvider from './components/cocktail/AppProvider';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 // import { Provider } from 'react-redux';
 
 // import { store } from './my redux/store';
