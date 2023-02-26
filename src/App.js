@@ -1,24 +1,24 @@
 //! my redux
 
-// import './App.css';
-// import CakeShop from './my redux/cake shop/CakeShop';
-// import IcecreamShop from './my redux/icecream shop/IcecreamShop';
-// import Users from './my redux/users/Users';
+import './App.css';
+import CakeShop from './my redux/cake shop/CakeShop';
+import IcecreamShop from './my redux/icecream shop/IcecreamShop';
+import Users from './my redux/users/Users';
 
-// function App() {
-//   return (
-//     <div className="App">
-//     {/* <ReduxCounter/> */}
-//     {/* <IcecreamShop/> */}
-//     <hr/>
-//     {/* <CakeShop/> */}
+function App() {
+  return (
+    <div className="App">
+    {/* <ReduxCounter/> */}
+    {/* <IcecreamShop/> */}
+    <hr/>
+    {/* <CakeShop/> */}
 
-//     {/* <Users/> */}
-//     </div>
-//   );
-// }
+    <Users/>
+    </div>
+  );
+}
 
-// export default App;
+export default App;
 
 //! reactjs carts 
 // import React from 'react'
@@ -67,22 +67,22 @@
 
 //! Cocktail api
 
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import CocktailNavbar from './components/cocktail/CocktailNavbar'
-import Home from './components/cocktail/Home'
-import SingleCocktail from './components/cocktail/SingleCocktail'
+// import React from 'react'
+// import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import CocktailNavbar from './components/cocktail/CocktailNavbar'
+// import Home from './components/cocktail/Home'
+// import SingleCocktail from './components/cocktail/SingleCocktail'
 
-function App() {
-  return (
-    <BrowserRouter>
-    <CocktailNavbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='cocktail/:id' element={<SingleCocktail/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
-}
+// function App() {
+//   return (
+//     <BrowserRouter>
+//     <CocktailNavbar/>
+//       <Routes>
+//         <Route path='/' element={<Home/>}/>
+//         <Route path='cocktail/:id' element={<SingleCocktail/>}/>
+//       </Routes>
+//     </BrowserRouter>
+//   )
+// }
 
-export default App
+// export default App

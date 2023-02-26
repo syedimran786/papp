@@ -33,4 +33,4 @@ let fetchUsers=()=>
     }
 }
 
-export {fetchuserreuest,fetchusersuccess,fetchuserfailure,fetchUsers}
+export {fetchUsers}
