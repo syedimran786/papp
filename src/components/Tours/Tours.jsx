@@ -4,35 +4,50 @@ import {mytours} from './myTours'
 import '../scss/Tours.scss'
 
 function Tours() {
-    let [tours, settours] = useState(mytours);
+
+    let [filtered, setfiltered] = useState(mytours);
+
+    let [searchTour,setsearchTour]=useState("")
 
     let deleteTour=(id)=>
     {
-      let newTours=tours.filter((t,i)=>
+      let newTours=filtered.filter((t,i)=>
       {
-        return i!=id
+        return i!==id
       })
 
-      settours(newTours);
+      setfiltered(newTours);
       console.log(newTours);
       console.log("Deleted")
     }
 
-    // useEffect(() => {
-    //  settours(mytours)
-    // }, [])
+    let tourfilter=()=>
+    {
+      let filteredData=mytours.filter(t=>
+        {
+          return t.place.toLowerCase().includes(searchTour)
+        })
+        setfiltered(filteredData);
+    }
 
-    if(tours.length===0)
+    useEffect(() => {
+    //  settours(mytours)
+    tourfilter()
+
+    },[searchTour])
+
+    if(mytours.length===0)
     {
       return <main>
         <h1>No tours left</h1>
-        <button onClick={()=>(settours(mytours))}>Refresh Tours</button>
+        <button onClick={()=>(setfiltered(mytours))}>Refresh Tours</button>
       </main>
     }
     
   return (
     <div className='tours'>
-       {tours.map((tour,i)=>
+      <input type="search"  onChange={({target:{value}})=>{setsearchTour(value)}} />
+       {filtered.map((tour,i)=>
        {
         return <Tour key={i} {...tour} deleteTour={()=>(deleteTour(i))}/>
        })}
